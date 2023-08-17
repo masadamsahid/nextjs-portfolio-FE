@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-avatar": "^1.0.3",
+    "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
@@ -18,6 +19,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "lucide-react": "^0.268.0",
+    "moment": "^2.29.4",
     "next": "13.4.16",
     "postcss": "8.4.28",
     "react": "18.2.0",

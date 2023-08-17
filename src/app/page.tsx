@@ -1,4 +1,5 @@
 import LeftNavigation from "@/components/LeftNavigation";
+import RightSection from "@/components/RightSection";
 
 export default function Home() {
   return (
@@ -7,8 +8,11 @@ export default function Home() {
         {/*Left Section*/}
         <LeftNavigation/>
         
+        {/*Main Content*/}
         <main className="flex-1 min-h-[200vh]">Main</main>
-        <section className="min-w-[300px]">Right Section</section>
+        
+        {/*Right Section*/}
+        <RightSection/>
       </div>
     </div>
   );
