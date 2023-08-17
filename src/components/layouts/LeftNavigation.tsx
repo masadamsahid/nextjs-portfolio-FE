@@ -54,12 +54,12 @@ const LeftNavigation = () => {
   return (
     <section className="min-w-[300px]">
       <div className="sticky top-0 h-screen flex flex-col gap-2">
-        <div className="text-xl font-bold flex justify-start items-center gap-2 p-4 cursor-pointer">
+        <Link href="/" className="text-xl font-bold flex justify-start items-center gap-2 p-4 cursor-pointer">
           <div className="text-3xl">
             <BsTwitter/>
           </div>
           TweetFolio
-        </div>
+        </Link>
         <div className="flex flex-col gap-4 w-full p-4">
           {NAVS.map((nav, i) => (
             <Link className="w-fit rounded-full" href={nav.url} key={nav.title}>
