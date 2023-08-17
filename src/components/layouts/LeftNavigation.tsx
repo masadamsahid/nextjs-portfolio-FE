@@ -1,4 +1,4 @@
-import { BsBriefcase, BsBriefcaseFill, BsThreeDots, BsTwitter } from "react-icons/bs";
+import { BsBriefcase, BsBriefcaseFill, BsSendFill, BsThreeDots, BsTwitter } from "react-icons/bs";
 import Link from "next/link";
 import { Button } from "@/components/shadcn/ui/button";
 import { IoCall } from "react-icons/io5";
@@ -7,6 +7,7 @@ import { IconType } from "react-icons";
 import { HiAcademicCap, HiNewspaper, HiOutlineAcademicCap, HiOutlineNewspaper } from "react-icons/hi2";
 import { PiCodeFill, PiCodeLight } from "react-icons/pi";
 import { FaRegUser, FaUser } from "react-icons/fa";
+import { PlaneIcon } from "lucide-react";
 
 
 type Navbar = {
@@ -52,7 +53,7 @@ const NAVS: Navbar[] = [
 
 const LeftNavigation = () => {
   return (
-    <section className="min-w-[300px]">
+    <section className="min-w-[250px]">
       <div className="sticky top-0 h-screen flex flex-col gap-2">
         <Link href="/" className="text-xl font-bold flex justify-start items-center gap-2 p-4 cursor-pointer">
           <div className="text-3xl">
@@ -73,9 +74,9 @@ const LeftNavigation = () => {
           ))}
           <Button className="rounded-full flex justify-center items-center gap-2 w-full bg-blue-500 text-lg text-center p-6 hover:bg-white/10">
             <div>
-              <IoCall/>
+              <BsSendFill/>
             </div>
-            Contact
+            Message
           </Button>
         </div>
         <div className="p-4 mt-auto">
@@ -90,8 +91,8 @@ const LeftNavigation = () => {
               </AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <div className="text-sm">Maulana Adam Sahid</div>
-              <div className="text-xs">@masadamsahid</div>
+              <div className="text-xs">Maulana Adam Sahid</div>
+              <div className="text-xs text-neutral-500">@masadamsahid</div>
             </div>
             <div className="flex justify-center items-center ml-auto my-auto">
               <BsThreeDots/>

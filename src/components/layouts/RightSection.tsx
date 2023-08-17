@@ -104,7 +104,7 @@ const DUMMY_POPULAR_PROJECTS: ProjectPreview[] = [
 const RightSection = () => {
   return (
     <section className="min-w-[300px]">
-      <div className="sticky -top-80 h-screen flex flex-col gap-4 p-4">
+      <div className="sticky -top-80 min-h-fit h-screen flex flex-col gap-4 p-4">
         <Card className="bg-transparent text-white border-gray-600/30">
           <CardHeader className="p-4">
             <CardTitle className="text-md">Statistics</CardTitle>

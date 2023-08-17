@@ -12,7 +12,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <LeftNavigation/>
         
         {/*Main Content*/}
-        <main className="flex-1 min-h-[200vh]">
+        <main className="flex-1 min-h-[150vh] border-x-[.5px] border-gray-700/50">
           {children}
         </main>
         
