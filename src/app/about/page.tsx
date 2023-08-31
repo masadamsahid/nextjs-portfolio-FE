@@ -9,6 +9,10 @@ import { HiLocationMarker } from "react-icons/hi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/shadcn/ui/avatar";
 import { useRouter } from "next/router";
 import { FaCakeCandles } from "react-icons/fa6";
+import MyServices from "@/components/MyServices";
+import MyAchievements from "@/components/MyAchievements";
+import MyTechStack from "@/components/MyTechStack";
+import MyCertificates from "@/components/MyCertificates";
 
 type Socmeds = {
   title: string;
@@ -64,26 +68,35 @@ const META_BIOS: MetaBio[] = [
 ];
 
 type ProfileTab = {
-  name: string,
-  displayName: string,
+  name: string;
+  displayName: string;
+  content: JSX.Element;
 }
 
 const TABS: ProfileTab[] = [
   {
-    displayName: "Skills",
-    name: "skills",
+    displayName: "Services",
+    name: "services",
+    content: <MyServices/>,
   },
+  {
+    displayName: "Achievements",
+    name: "achievements",
+    content: <MyAchievements/>,
+  },
+  // {
+  //   displayName: "Skills",
+  //   name: "skills",
+  // },
   {
     displayName: "Tech Stack",
     name: "tech-stacks",
+    content: <MyTechStack/>,
   },
   {
     displayName: "Certificates",
     name: "certificates",
-  },
-  {
-    displayName: "Services",
-    name: "services",
+    content: <MyCertificates/>,
   },
 ];
 
@@ -93,7 +106,14 @@ const ProfilePage = (
     searchParams?: { [key: string]: string | string[] | undefined };
   }
 ) => {
-  const activeTab = searchParams?.activeTab || "skills";
+  const firstTab = TABS[0].name;
+  const qActiveTab = searchParams?.activeTab as string;
+  const isActiveTabIncluded = TABS.map(e => e.name).includes(qActiveTab);
+  const activeTab = isActiveTabIncluded ? qActiveTab : firstTab;
+  
+  console.log({ firstTab, qActiveTab, isActiveTabIncluded, activeTab });
+  
+  const ActiveContent = TABS.find((tab) => tab.name === activeTab)?.content;
   
   return (
     <MainLayout>
@@ -175,7 +195,8 @@ const ProfilePage = (
         {/*Tabs*/}
         <div className="flex items-center cursor-pointer">
           {TABS.map((tab) => (
-            <div
+            <Link
+              href={`/about?activeTab=${tab.name}`}
               className="hover:bg-white/10 flex-1 transition duration-200"
               key={tab.name}
             >
@@ -187,13 +208,13 @@ const ProfilePage = (
                   {tab.name === activeTab && <div className="absolute bottom-0 w-full h-1 rounded-full bg-blue-500"></div>}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         
         {/*Content*/}
         <div className="w-full h-8 mt-0.5 border-y-[.5px] border-gray-700/50">
-        
+          {ActiveContent}
         </div>
       </div>
     </MainLayout>
