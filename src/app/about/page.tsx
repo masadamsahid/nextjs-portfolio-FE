@@ -213,9 +213,10 @@ const ProfilePage = (
         </div>
         
         {/*Content*/}
-        <div className="w-full h-8 mt-0.5 border-y-[.5px] border-gray-700/50">
+        <div className="w-full h-fit mt-0.5 border-y-[.5px] border-gray-700/50">
           {ActiveContent}
         </div>
+        
       </div>
     </MainLayout>
   );
