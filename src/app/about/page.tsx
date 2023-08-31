@@ -3,10 +3,12 @@ import Image from "next/image";
 import { Button } from "@/components/shadcn/ui/button";
 import { Github, Instagram, Linkedin, LucideIcon } from "lucide-react";
 import Link from "next/link";
-import { BsBriefcase, BsCalendar3, BsEnvelopeAt, BsFillPatchCheckFill } from "react-icons/bs";
+import { BsBriefcase, BsEnvelopeAt, BsFillPatchCheckFill } from "react-icons/bs";
 import { IconType } from "react-icons";
 import { HiLocationMarker } from "react-icons/hi";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/shadcn/ui/avatar";
+import { useRouter } from "next/router";
+import { FaCakeCandles } from "react-icons/fa6";
 
 type Socmeds = {
   title: string;
@@ -57,14 +59,46 @@ const META_BIOS: MetaBio[] = [
   {
     title: 'BoD',
     value: 'Joined for 25 years',
-    icon: BsCalendar3,
+    icon: FaCakeCandles,
   },
 ];
 
-const ProfilePage = () => {
+type ProfileTab = {
+  name: string,
+  displayName: string,
+}
+
+const TABS: ProfileTab[] = [
+  {
+    displayName: "Skills",
+    name: "skills",
+  },
+  {
+    displayName: "Tech Stack",
+    name: "tech-stacks",
+  },
+  {
+    displayName: "Certificates",
+    name: "certificates",
+  },
+  {
+    displayName: "Services",
+    name: "services",
+  },
+];
+
+const ProfilePage = (
+  { params, searchParams }: {
+    params: { slug: string };
+    searchParams?: { [key: string]: string | string[] | undefined };
+  }
+) => {
+  const activeTab = searchParams?.activeTab || "skills";
+  
   return (
     <MainLayout>
       <div className="flex flex-col">
+        {/*Pre Header*/}
         <div className="p-2">
           <h1 className="text-lg font-extrabold">
             Maulana Adam Sahid
@@ -73,6 +107,8 @@ const ProfilePage = () => {
             Software Engineer | Self-Proclaimed Data Enthusiast 👀
           </p>
         </div>
+        
+        {/*Header*/}
         <div className="flex flex-col">
           <Image
             className="w-full"
@@ -84,13 +120,13 @@ const ProfilePage = () => {
           <div className="p-4 flex flex-col gap-4 relative">
             <Avatar
               title="Maulana Adam Sahid's image"
-              className="w-24 lg:w-32 h-auto absolute -top-16 outline-4 outline-black outline"
+              className="w-24 lg:w-32 h-24 lg:h-32 absolute -top-16 outline-4 outline-black outline"
             >
               <AvatarImage
                 src="https://media.licdn.com/dms/image/C5603AQE2-ox_80I8Yg/profile-displayphoto-shrink_800_800/0/1619930750668?e=1697673600&v=beta&t=T_BH_KTeVT1arlM-hDFOVF9I49Vn4XDZwMCeTsTalwQ"
                 alt="Maulana Adam Sahid's image"
               />
-              <AvatarFallback className="text-xs bg-blue-500 font-bold">
+              <AvatarFallback className="text-2xl lg:text-3xl bg-blue-500 font-bold">
                 MAS
               </AvatarFallback>
             </Avatar>
@@ -134,6 +170,30 @@ const ProfilePage = () => {
               ))}
             </div>
           </div>
+        </div>
+        
+        {/*Tabs*/}
+        <div className="flex items-center cursor-pointer">
+          {TABS.map((tab) => (
+            <div
+              className="hover:bg-white/10 flex-1 transition duration-200"
+              key={tab.name}
+            >
+              <div className="flex flex-col items-center">
+                <div className="w-fit relative">
+                  <p className="py-4">
+                    {tab.displayName}
+                  </p>
+                  {tab.name === activeTab && <div className="absolute bottom-0 w-full h-1 rounded-full bg-blue-500"></div>}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/*Content*/}
+        <div className="w-full h-8 mt-0.5 border-y-[.5px] border-gray-700/50">
+        
         </div>
       </div>
     </MainLayout>
