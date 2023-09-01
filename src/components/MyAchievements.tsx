@@ -2,6 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/shadcn/ui/avat
 import { BsDot, BsTrophyFill } from "react-icons/bs";
 import moment from "moment/moment";
 import Link from "next/link";
+import BackToTop from "@/components/BackToTop";
 
 const DEFAULT_IMG_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPKL6wul-p6jmhSLsDbmJPaLWSPDOXNtCq6R0v1P9nKnDN35ERlvTA2v_bZs9zxQ-i_gA&usqp=CAU";
 
@@ -61,6 +62,7 @@ const MyAchievements = () => {
           </div>
         </div>
       ))}
+      <BackToTop/>
     </div>
   );
 };

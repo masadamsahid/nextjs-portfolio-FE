@@ -17,6 +17,7 @@ import { GiPieChart } from "react-icons/gi";
 import { RiBarChart2Fill } from "react-icons/ri";
 import { BsFillArrowUpCircleFill } from "react-icons/bs";
 import Link from "next/link";
+import BackToTop from "@/components/BackToTop";
 
 const TECH_STACKS = [
   {
@@ -222,23 +223,14 @@ const MyTechStack = () => {
           <h1 className="font-bold text-xl font-mono">{ts.title}</h1>
           <div className="flex gap-2 flex-wrap">
             {ts.techs.map((t) => (
-              <Button key={t.id} className="">
+              <Button key={t.id} className="hover:bg-blue-600">
                 {t.icon}&nbsp;{t.title}
               </Button>
             ))}
           </div>
         </div>
       ))}
-      <div className='p-4 flex flex-col gap-2 items-center jc'>
-        <p className="text-xs text-neutral-400">
-          End of Content
-        </p>
-        <Link href='#'>
-          <Button className="bg-blue-500 hover:bg-blue-500/60">
-            <BsFillArrowUpCircleFill/>&nbsp;Back To Top
-          </Button>
-        </Link>
-      </div>
+      <BackToTop/>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/shadcn/ui/avat
 import { BsChat, BsDot, BsFillPatchCheckFill } from "react-icons/bs";
 import { FaTruckFast } from "react-icons/fa6";
 import Image from "next/image";
+import BackToTop from "@/components/BackToTop";
 
 const LOREM_25 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias at consectetur deserunt doloribus error explicabo illo laudantium maxime non, optio quae quod repellendus voluptatum. Quasi!";
 const LOREM_50 = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur eum nesciunt voluptate. Amet atque consectetur eos est in? A aliquid animi aspernatur assumenda consequatur cupiditate dignissimos doloribus est explicabo facilis, fugiat fugit incidunt ipsa iste iure maiores maxime nam nulla optio perferendis quos saepe sapiente suscipit temporibus tenetur totam ullam.";
@@ -81,6 +82,7 @@ const MyServices = () => {
           
         </div>
       ))}
+      <BackToTop/>
     </div>
   );
 };
