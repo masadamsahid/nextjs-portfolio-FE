@@ -1,9 +1,10 @@
 import MainLayout from "@/components/layouts/MainLayout";
+import UnderConstruction from "@/components/UnderConstruction";
 
 const BlogsPage = () => {
   return (
     <MainLayout>
-      Blogs Page
+      <UnderConstruction/>
     </MainLayout>
   );
 };

@@ -1,9 +1,10 @@
 import MainLayout from "@/components/layouts/MainLayout";
+import UnderConstruction from "@/components/UnderConstruction";
 
 const ProjectsPage = () => {
   return (
     <MainLayout>
-      Projects Page
+      <UnderConstruction/>
     </MainLayout>
   );
 };
