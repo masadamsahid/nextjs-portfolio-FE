@@ -53,7 +53,7 @@ const NAVS: Navbar[] = [
 
 const LeftNavigation = () => {
   return (
-    <section className="min-w-[250px]">
+    <section className="min-w-[300px]">
       <div className="sticky top-0 h-screen flex flex-col gap-2">
         <Link href="/" className="text-xl font-bold flex justify-start items-center gap-2 p-4 cursor-pointer">
           <div className="text-3xl">

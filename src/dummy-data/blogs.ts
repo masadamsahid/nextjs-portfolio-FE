@@ -1,5 +1,6 @@
 import { CATEGORIES, Category } from "@/dummy-data/category";
 import { Author, AUTHORS } from "@/dummy-data/author";
+import { BODY_1, BODY_2, BODY_3 } from "@/dummy-data/blog-bodies";
 
 export type Blog = {
   id: number;
@@ -25,7 +26,7 @@ export const BLOGS: Blog[] = [
     title: "Create Simple To Do List using React",
     img_url: "https://media.geeksforgeeks.org/wp-content/uploads/20230606125727/gfg.png",
     desc: "Learn how to create a simple to do list app using React",
-    body: "",
+    body: BODY_1,
     author: AUTHORS[0],
     categories: [
       CATEGORIES[0], CATEGORIES[1],
@@ -39,7 +40,7 @@ export const BLOGS: Blog[] = [
     title: "Data Wrangling using Python (Numpy and Pandas)",
     img_url: "https://online.york.ac.uk/wp-content/uploads/2021/07/man-in-a-suit-standing-behind-a-hologram-of-data-analytics.jpg",
     desc: "A practical data wrangling tutorial for beginners",
-    body: "",
+    body: BODY_2,
     author: AUTHORS[1],
     categories: [
       CATEGORIES[3],
@@ -52,7 +53,7 @@ export const BLOGS: Blog[] = [
     slug: "build-crud-api-using-nestjs-and-deploy-using-azure",
     title: "Build CRUD API using NestJS and Deploy using Azure",
     desc: "Learn how to create a simple to do list app using React",
-    body: "",
+    body: BODY_3,
     author: AUTHORS[2],
     categories: [
       CATEGORIES[0], CATEGORIES[2], CATEGORIES[4],
