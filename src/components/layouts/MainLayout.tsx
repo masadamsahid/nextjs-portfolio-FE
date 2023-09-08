@@ -1,15 +1,14 @@
 import React from "react";
 import LeftNavigation from "@/components/layouts/LeftNavigation";
 import RightSection from "@/components/layouts/RightSection";
+import BannerUnderDev from "@/components/BannerUnderDev";
 
 interface MainLayoutProps extends React.PropsWithChildren {}
 
 const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <div className="flex flex-col justify-center items-center w-screen h-screen bg-black text-white">
-      {/*<div className="p-2 bg-blue-500 text-xs text-center w-full">
-        This site is not completed yet and currently under development.
-      </div>*/}
+      <BannerUnderDev/>
       <div className="flex-1 w-full gap-2 overflow-auto">
         <div className="container flex">
           {/*Left Section*/}
