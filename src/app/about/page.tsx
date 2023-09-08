@@ -118,15 +118,6 @@ const ProfilePage = (
   return (
     <MainLayout>
       
-      {/*TRIED TYPOGRAPHY HERE BUT STILL NOT WORKING*/}
-      <article className="p-4 prose max-w-prose">
-        <h1>Your Family</h1>
-        <h2>Your Mom</h2>
-        <h3>Your Dad</h3>
-        <p>Your Siblings</p>
-        <code>Your Kids</code>
-      </article>
-      
       <div className="flex flex-col">
         {/*Pre Header*/}
         <div className="p-2">
