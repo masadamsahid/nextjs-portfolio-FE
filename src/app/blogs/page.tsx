@@ -30,7 +30,7 @@ const BlogsPage = () => {
               </div>
               
               
-              <div className="flex flex-col gap-4 relative">
+              <div className="flex-1 flex flex-col gap-4 relative">
                 <div className="flex gap-1 items-center">
                   <h2 className="font-semibold text-sm">
                     {blog.author.name}
@@ -40,7 +40,7 @@ const BlogsPage = () => {
                   </p>
                 </div>
                 
-                <Link href={`/${blog.slug}`} className="group">
+                <Link href={`/blogs/${blog.slug}`} className="group">
                   <Card className="bg-transparent rounded-lg border-[.5px] border-neutral-700/70 overflow-hidden text-white">
                     <CardHeader className="p-0 border-b-[.5px] border-neutral-700/30">
                       <img src={blog.img_url || DEFAULT_BLOG_IMG} alt={blog.title} title={blog.title}/>

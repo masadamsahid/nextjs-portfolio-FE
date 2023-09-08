@@ -69,8 +69,15 @@
 @layer base {
   * {
     @apply border-border;
+    @apply scrollbar scrollbar-thumb-blue-500/70 scrollbar-thumb-rounded-sm;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
