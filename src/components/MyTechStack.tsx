@@ -219,7 +219,7 @@ const MyTechStack = () => {
   return (
     <div className="flex flex-col" id="#">
       {TECH_STACKS.map((ts) => (
-        <div className="p-4 flex flex-col gap-2 border-b-[.5px] border-neutral-700/30">
+        <div key={ts.id} className="p-4 flex flex-col gap-2 border-b-[.5px] border-neutral-700/30">
           <h1 className="font-bold text-xl font-mono">{ts.title}</h1>
           <div className="flex gap-2 flex-wrap">
             {ts.techs.map((t) => (

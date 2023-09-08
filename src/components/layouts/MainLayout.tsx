@@ -15,7 +15,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
           <LeftNavigation/>
           
           {/*Main Content*/}
-          <main className="max-w-prose min-h-[150vh] border-x-[.5px] border-gray-700/50">
+          <main className="w-full max-w-prose min-h-[150vh] border-x-[.5px] border-gray-700/50">
             {children}
           </main>
           
