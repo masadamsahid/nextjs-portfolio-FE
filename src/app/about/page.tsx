@@ -111,7 +111,7 @@ const ProfilePage = (
   const isActiveTabIncluded = TABS.map(e => e.name).includes(qActiveTab);
   const activeTab = isActiveTabIncluded ? qActiveTab : firstTab;
   
-  console.log({ firstTab, qActiveTab, isActiveTabIncluded, activeTab });
+  // console.log({ firstTab, qActiveTab, isActiveTabIncluded, activeTab });
   
   const ActiveContent = TABS.find((tab) => tab.name === activeTab)?.content;
   
