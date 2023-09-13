@@ -13,6 +13,8 @@ import MyServices from "@/components/MyServices";
 import MyAchievements from "@/components/MyAchievements";
 import MyTechStack from "@/components/MyTechStack";
 import MyCertificates from "@/components/MyCertificates";
+import { MdDownload } from "react-icons/md";
+import { RiDownload2Line } from "react-icons/ri";
 
 type Socmeds = {
   title: string;
@@ -159,9 +161,11 @@ const ProfilePage = (
                   </Button>
                 </Link>
               ))}
-              <Button className="bg-white hover:bg-white/90 text-black rounded-full">
-                Contacts
-              </Button>
+              <Link target="_blank" href="https://cdn.sejutacita.id/6376281168e6b200152bc882/JobPortalCV/ef210fe0-f4c7-4e91-b766-5ae9bc41d1c6/Resume%2520Maulana%2520Adam%2520Sahid%2520(Software%2520Engineer)%2520(2).pdf">
+                <Button className="bg-white hover:bg-white/90 text-black rounded-full flex gap-2 justify-center items-center">
+                  Resume <RiDownload2Line/>
+                </Button>
+              </Link>
             </div>
             
             <div className="flex flex-col gap-0">

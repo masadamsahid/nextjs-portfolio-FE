@@ -48,7 +48,7 @@ const ProjectDetailPage : FC<UrlAndQueryParams> = ({params, searchParams}) => {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="dark bg-black border-[.5px] border-neutral-700/30" align='end'>
                     <CopyLinkDropdownMenuItem/>
-                    <DropdownMenuSeparator className="bg-neutral-700/30" />
+                    {(project?.link || project.gh_link) && <DropdownMenuSeparator className="bg-neutral-700/30"/>}
                     {project?.link && (
                       <Link href={project?.link} target="_blank">
                         <DropdownMenuItem className="flex gap-2 items-center hover:cursor-pointer">
