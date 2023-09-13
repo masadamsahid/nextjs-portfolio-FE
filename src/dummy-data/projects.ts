@@ -12,7 +12,6 @@ export type Project = {
   gh_link?: string;
   created_at?: Date;
   updated_at?: Date;
-  deleted_at?: Date;
   categories: Category[];
 }
 
@@ -25,6 +24,8 @@ export const PROJECTS: Project[] = [
     title: "Rent Payment Records' Checker",
     body: BODY_1,
     author: AUTHORS[0],
+    link: "",
+    gh_link: "",
     categories: [
       CATEGORIES[0], CATEGORIES[1],
     ],
@@ -37,6 +38,8 @@ export const PROJECTS: Project[] = [
     title: "Chat App with Socket.io",
     body: BODY_2,
     author: AUTHORS[1],
+    link: "https://github.dev/shadcn-ui/taxonomy",
+    gh_link: "https://github.com/sandhikagalih/project-kalian",
     categories: [
       CATEGORIES[3], CATEGORIES[2],
     ],
